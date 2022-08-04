@@ -66,8 +66,31 @@ public class Main {
                     default:
                         System.out.println("Не корректный номер месяца");
                 }
+        // Задача 6
+        byte age=19;
+        int salary=58000;
+        double limit;
+        if (age>=23) {limit=3*salary;}
+            else {limit=2*salary;}
+        if (salary>=50000 && salary<80000) {limit=limit*1.2;}
+        if ( salary>=80000) {limit=limit*1.3;}
+        System.out.println("Мы готовы выдать вам кредитную карту с лимитом "+limit+" рублей");
+        //Задача 7
 
-        }
+        age=25;
+        salary=60000;
+        int wantedSum=330000;
+        double stavka=10;
+        double mountPlat;
+
+        if (age<23){stavka=stavka+1;}
+        if (age<30 && age >=23){stavka=stavka+0.5;}
+        if (salary>80000){stavka=stavka-0.7;}
+        mountPlat=(wantedSum+wantedSum*(stavka/100))/12;//расчет ежемесячного платежа
+        if (mountPlat/salary<0.5) {System.out.println("Мы готовы выдать вам кредит.Ежемесячный платеж составляет "+mountPlat);}
+            else {System.out.println("Мы не готовы выдать вам кредит. Ежемесячный платеж составляет "+mountPlat);}
+    }
+
 }
 
 
